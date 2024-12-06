@@ -1,2 +1,5 @@
 opencv-python
 scikit-learn
+torch
+torchvision
+ultralytics
