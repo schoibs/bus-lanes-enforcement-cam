@@ -170,14 +170,14 @@ class UltrafastLaneDetector():
 					cv2.rectangle(image,
 								(int(x1), int(y1)),
 								(int(x2), int(y2)),
-								(0, 255, 0), 2)
+								(0, 0, 255), 2)
 
 					# Add label
 					label = f"{class_name}: {confidence:.2f}"
 					cv2.putText(image, label,
 							(int(x1), int(y1)-10),
 							cv2.FONT_HERSHEY_SIMPLEX,
-							0.5, (0, 255, 0), 2)
+							0.5, (0, 0, 255), 2)
 
 		# Draw depth image
 		visualization_img = self.draw_lanes(image, self.lanes_points, self.lanes_detected, self.cfg, draw_points)
