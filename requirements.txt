@@ -3,3 +3,4 @@ scikit-learn
 torch
 torchvision
 ultralytics
+scipy
