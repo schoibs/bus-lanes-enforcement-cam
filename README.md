@@ -25,7 +25,9 @@ pip install -r requirements
  python main.py
  ```
 
-
+![screenshot_1](imageFolder/screenshot_1.png)
+![screenshot_2](imageFolder/screenshot_2.png)
+![screenshot_3](imageFolder/screenshot_3.png)
 
 # Reference
 
