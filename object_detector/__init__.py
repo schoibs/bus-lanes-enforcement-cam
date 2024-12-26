@@ -1,0 +1,1 @@
+from object_detector.yolo import ObjectDetectorModel

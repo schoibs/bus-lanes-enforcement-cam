@@ -1,51 +1,36 @@
-# Ultrafast Lane Detection Inference Pytorch
-Example scripts for the detection of lanes using the [ultra fast lane detection model](https://github.com/cfzd/Ultra-Fast-Lane-Detection) in Pytorch.
+# Bus Lanes Enforcement Camera
+This project aims to develop a prototype AI camera system for automated bus lane enforcement. The goal is to protect dedicated bus lanes from unauthorized vehicle use.
 
-![!Ultra fast lane detection](https://github.com/ibaiGorordo/Ultrafast-Lane-Detection-Inference-Pytorch-/blob/main/doc/img/detected%20lanes.jpg)
-Source: https://www.flickr.com/photos/32413914@N00/1475776461/
+We propose leveraging the widespread adoption of car dashboard cameras (dashcams) as enforcement tools. The idea is to have many of these individual dashcam cameras to act as enforcement cameras, creating a distributed network of monitoring devices. More eyes on the road means greater enforcement of traffic rules. Hence, this prototype uses sample videos that simulate typical dashcam footage.
 
-# Requirements
+# Prerequisite
 
- * **OpenCV**, **Scikit-learn** and **pytorch**. **pafy** and **youtube-dl** are required for youtube video inference. 
- 
-# Installation
-```
+### Libraries
+```shell
+pip3 -m venv venv
+source venv/bin/activate
 pip install -r requirements
-pip install pafy youtube-dl
-
 ```
-**Pytorch:** Check the [Pytorch website](https://pytorch.org/) to find the best method to install Pytorch in your computer.
 
-# Pretrained model
-Download the pretrained model from the [original repository](https://github.com/cfzd/Ultra-Fast-Lane-Detection) and save it into the **[models](https://github.com/ibaiGorordo/Ultrafast-Lane-Detection-Inference-Pytorch-/tree/main/models)** folder. 
+### Pretrained model
+1. Create a folder `artifact`
+2. Download the pretrained Res-18 model on Tusimple dataset from the [original UFLD repository](https://github.com/cfzd/Ultra-Fast-Lane-Detection) and save it into the `artifact` folder.
 
-# Ultra fast lane detection - TuSimple([link](https://github.com/cfzd/Ultra-Fast-Lane-Detection))
+### Output
+1. Create a folder `output`
 
- * **Input**: RGB image of size 1280 x 720 pixels.
- * **Output**: Keypoints for a maximum of 4 lanes (left-most lane, left lane, right lane, and right-most lane).
- 
-# Examples
+# Running the Project
 
- * **Image inference**:
- 
+ ```shell
+ python main.py
  ```
- python imageLaneDetection.py 
- ```
- 
-  * **Webcam inference**:
- 
- ```
- python webcamLaneDetection.py
- ```
- 
-  * **Video inference**:
- 
- ```
- python videoLaneDetection.py
- ```
- 
- # [Inference video Example](https://youtu.be/0Owf6gef1Ew) 
- ![!Ultrafast lane detection on video](https://github.com/ibaiGorordo/Ultrafast-Lane-Detection-Inference-Pytorch-/blob/main/doc/img/laneDetection.gif)
- 
- Original video: https://youtu.be/2CIxM7x-Clc (by Yunfei Guo)
- 
+
+![screenshot_1](media/screenshot_1.png)
+![screenshot_2](media/screenshot_2.png)
+![screenshot_3](media/screenshot_3.png)
+
+# Reference
+
+- the model used for lane detections: [original UFLD repository](https://github.com/cfzd/Ultra-Fast-Lane-Detection)
+- this project's code draws extensively from this repository [ibaiGorordo/Ultrafast-Lane-Detection-Inference-Pytorch-](https://github.com/ibaiGorordo/Ultrafast-Lane-Detection-Inference-Pytorch-/tree/main)
+- the sample video is taken from this [youtube vid](https://www.youtube.com/watch?v=qCW_hJTGTLQ&t=2s)
